@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluación Docente</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ffeb3b, #4caf50); /* amarillo → verde */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .contenedor {
+            background-color: #fffde7; /* fondo claro */
+            border: 2px solid #388e3c; /* verde intenso */
+            border-radius: 15px;
+            padding: 30px 50px;
+            text-align: center;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #1b5e20; /* verde más fuerte */
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #cddc39; /* verde amarillento */
+            border-radius: 10px;
+            margin-bottom: 20px;
+            outline: none;
+        }
+        button {
+            background-color: #4caf50; /* verde medio */
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #2e7d32; /* verde oscuro */
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Evaluación Docente</h1>
+        <h1>IMDI 2,025</h1>
+        <p>Seleccione su grado:</p>
+        <select id="grado">
+            <option value="">-- Seleccione --</option>
+            <option value="form1">4to Perito Contador</option>
+            <option value="form2">5to Perito Contador</option>
+            <option value="form3">4to Infantil</option>
+            <option value="form4">5to Infantil</option>
+            <option value="form5">6to Infantil</option>
+            <option value="form6">4to Medicina</option>
+            <option value="form7">5to Medicina</option>
+            <option value="form8">4to Bach. Computación</option>
+            <option value="form9">5to Bach. Computación</option>
+            <option value="form10">4to Bach. Educación</option>
+            <option value="form11">4to Bach. Administración</option>
+            <option value="form12">4to Bach. Ciencias Jurídicas</option>
+        </select>
+        <br>
+        <button onclick="redirigir()">Evaluar</button>
+    </div>
+
+    <script>
+        function redirigir() {
+            const grado = document.getElementById("grado").value;
+            let url = "";
+
+            if (grado === "form1") url = "https://docs.google.com/forms/d/e/1FAIpQLSdM1ASBmQdxtTDd4VJmK1hRUl5Al5NpHFvul_eMPPU9NDX6CQ/viewform?usp=header";
+            else if (grado === "form2") url = "https://docs.google.com/forms/d/e/1FAIpQLScHMOi2LtDVa7JwoNhKJfyQ6HBJcKshSwKNgi49kL6jdnMzYA/viewform?usp=header";
+            else if (grado === "form3") url = "https://docs.google.com/forms/d/e/1FAIpQLSfWtgVuFKOTz3auOz5bQGhcE-QufLUGAEobG-nMCG7uJ0iRcA/viewform?usp=header";
+            else if (grado === "form4") url = "https://docs.google.com/forms/d/e/1FAIpQLSf7E6dyaDJVRw0biBz2nxzRPdbkYt0f4DUG6a6AtXAy2QMVeQ/viewform?usp=header";
+            else if (grado === "form5") url = "https://docs.google.com/forms/d/e/1FAIpQLSc_7nFcMIf0P0e9VdxKaB5_wINs_m7w9TfOvBMInTj8eOXFgA/viewform?usp=header";
+            else if (grado === "form6") url = "https://docs.google.com/forms/d/e/1FAIpQLSeC31Hgyt5s1Wh4i2koypVvREGcdHAj54fTV1LkIpAYd_zgdg/viewform?usp=header";
+            else if (grado === "form7") url = "https://docs.google.com/forms/d/e/1FAIpQLSeKw9I89cSbQZu0_8pn_NpWkbnKLggpltsZqE4GOtCzepOQXw/viewform?usp=header";
+            else if (grado === "form8") url = "https://docs.google.com/forms/d/e/1FAIpQLSeg8vxm5hPtStum8XVB6VlmIpuuyLLBnSD2s10Jis0aTN30ZQ/viewform?usp=header";
+            else if (grado === "form9") url = "https://docs.google.com/forms/d/e/1FAIpQLSdNXW0tBzLTeZfonpVGCMc2f9_wYpfYIXXrfkcRmPWaVWu3Pw/viewform?usp=header";
+            else if (grado === "form10") url = "https://docs.google.com/forms/d/e/1FAIpQLSdjPFeLZosU_NMMqlQBiprkqKaY9mtYud0w0Leo5SYPyJ2t1Q/viewform?usp=header";
+            else if (grado === "form11") url = "https://docs.google.com/forms/d/e/1FAIpQLSelN0lUwIgrBAN4-QDKkuQRCpb9Fji8q-ed-2nrNZ0CX57big/viewform?usp=header";
+            else if (grado === "form12") url = "https://docs.google.com/forms/d/e/1FAIpQLSenlgnkWO8CNs3_kQcze9A2-uDQtkCs5gtIigUszJ_Yk9HXlA/viewform?usp=header";
+
+            if (url) {
+                window.location.href = url;
+            } else {
+                alert("Por favor, seleccione un grado.");
+            }
+        }
+    </script>
+</body>
+</html>
+
